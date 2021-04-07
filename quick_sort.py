@@ -1,4 +1,4 @@
-def Partition(l, left, right):
+def partition(l, left, right):
     pivot = l[left]
     i = left
 
@@ -11,8 +11,8 @@ def Partition(l, left, right):
 
     return i
 
-def Quicksort(l, left, right):
+def quicksort(l, left, right):
     if left < right:
-        pivot = Partition(l, left, right)
-        Quicksort(l, left, pivot - 1)
-        Quicksort(l, pivot + 1, right)
+        pivot = partition(l, left, right)
+        quicksort(l, left, pivot - 1)
+        quicksort(l, pivot + 1, right)
