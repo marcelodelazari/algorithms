@@ -1,4 +1,4 @@
-def ThreewayPartition(l, left, right):
+def threeway_partition(l, left, right):
     pivot = l[left]
     i = left
 
@@ -20,8 +20,8 @@ def ThreewayPartition(l, left, right):
 
     return t + 1, i
 
-def ThreewayQuicksort(l, left, right):
+def threeway_quicksort(l, left, right):
     if left < right:
-        left_pivot, right_pivot = Threeway_Partition(l, left, right)
-        Threeway_Quicksort(l, left, left_pivot - 1)
-        Threeway_Quicksort(l, right_pivot + 1, right)
+        left_pivot, right_pivot = threeway_partition(l, left, right)
+        threeway_quicksort(l, left, left_pivot - 1)
+        threeway_quicksort(l, right_pivot + 1, right)
